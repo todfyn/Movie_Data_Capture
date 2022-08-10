@@ -602,7 +602,7 @@ def paste_file_to_folder_mode2(filepath, path, multi_part, number, part, leak_wo
         number += part  # 这时number会被附加上CD1后缀
     filepath_obj = pathlib.Path(filepath)
     houzhui = filepath_obj.suffix
-    targetpath = os.path.join(path, f"{number}{part}{leak_word}{c_word}{hack_word}{houzhui}")
+    targetpath = os.path.join(path, f"{number}{leak_word}{c_word}{hack_word}{houzhui}")
     if os.path.exists(targetpath):
         raise FileExistsError('File Exists on destination path, we will never overwriting.')
     try:
